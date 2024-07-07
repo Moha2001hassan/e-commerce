@@ -18,6 +18,10 @@ dependencies:
   iconsax: ^0.0.8
   get_storage: ^2.1.1
   flutter_native_splash: ^2.3.11
+  smooth_page_indicator: ^1.1.0
+  flutter_bloc: ^8.1.6
+  lottie: ^3.1.2
+
 
 dev_dependencies:
   flutter_test:
@@ -31,6 +35,7 @@ flutter:
     - assets/logos/
     - assets/images/
     - assets/icons/
+    - assets/animation/
 
 
   fonts:
