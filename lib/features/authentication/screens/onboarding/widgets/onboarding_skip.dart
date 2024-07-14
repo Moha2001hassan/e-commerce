@@ -1,6 +1,4 @@
-import 'package:e_commerce/utils/helpers/navigation.dart';
 import 'package:flutter/material.dart';
-import '../../../../../utils/routing/routes.dart';
 
 class SkipButton extends StatelessWidget {
   final Function onSkip;

@@ -34,17 +34,17 @@ class _OnBoardingState extends State<OnBoarding> {
             },
             children: const [
               OnBoardingPage(
-                  image: TImages.onboarding1,
-                  title: TTexts.onBoardingTitle1,
-                  subtitle: TTexts.onBoardingSupTitle1),
+                  image: MyImages.onboarding1,
+                  title: MyTexts.onBoardingTitle1,
+                  subtitle: MyTexts.onBoardingSupTitle1),
               OnBoardingPage(
-                  image: TImages.onboarding2,
-                  title: TTexts.onBoardingTitle2,
-                  subtitle: TTexts.onBoardingSupTitle2),
+                  image: MyImages.onboarding2,
+                  title: MyTexts.onBoardingTitle2,
+                  subtitle: MyTexts.onBoardingSupTitle2),
               OnBoardingPage(
-                  image: TImages.onboarding3,
-                  title: TTexts.onBoardingTitle3,
-                  subtitle: TTexts.onBoardingSupTitle3),
+                  image: MyImages.onboarding3,
+                  title: MyTexts.onBoardingTitle3,
+                  subtitle: MyTexts.onBoardingSupTitle3),
             ],
           ),
 
