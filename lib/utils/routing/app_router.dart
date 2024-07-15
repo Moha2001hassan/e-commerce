@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../features/authentication/screens/login/login.dart';
 import '../../features/authentication/screens/onboarding/onboarding.dart';
+import '../../features/authentication/screens/signup/signup.dart';
 import 'routes.dart';
 
 class AppRouter {
@@ -11,6 +12,9 @@ class AppRouter {
 
       case Routes.onBoardingScreen:
         return MaterialPageRoute(builder: (_) => const OnBoarding());
+
+      case Routes.signupScreen:
+        return MaterialPageRoute(builder: (_) => const SignupScreen());
 
       default:
         return MaterialPageRoute(

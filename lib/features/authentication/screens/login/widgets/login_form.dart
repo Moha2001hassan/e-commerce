@@ -1,6 +1,8 @@
 import 'package:e_commerce/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:e_commerce/utils/helpers/navigation.dart';
+import '../../../../../utils/routing/routes.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({
@@ -88,7 +90,9 @@ class _LoginFormState extends State<LoginForm> {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.pushNamed(Routes.signupScreen);
+                },
                 child: const Text(MyTexts.createAccount),
               ),
             ),
