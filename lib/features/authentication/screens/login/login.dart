@@ -15,9 +15,9 @@ class LoginPage extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: MySpacingStyle.paddingWithAppBarHeight,
+            padding: EdgeInsets.all(13),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 // Logo, Title & Subtitle
                 LoginHeader(),

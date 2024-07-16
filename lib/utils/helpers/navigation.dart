@@ -19,4 +19,8 @@ extension Navigation on BuildContext {
   void pop() {
     Navigator.of(this).pop();
   }
+
+  void popUntil(RoutePredicate predicate) {
+    Navigator.of(this).popUntil(predicate);
+  }
 }

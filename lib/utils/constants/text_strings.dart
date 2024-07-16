@@ -10,7 +10,7 @@ class MyTexts{
   static const String onBoardingSupTitle3 = "From Our Doorstep, You'll Receive Your Products - Your Satisfaction Is Our Priority!";
 
   // Login
-  static const String loginTitle = "Welcome Back,";
+  static const String loginTitle = "Welcome Back";
   static const String loginSubtitle = "Discover Limitless Choices and Unwatched Convenience";
   static const String loginDividerText = "Or Sign With";
   static const String rememberMe = "Remember Me";
@@ -18,7 +18,7 @@ class MyTexts{
   static const String createAccount = "Create Account";
 
   // Signup
-  static const String signupTitle = "Let's create your account";
+  static const String signupTitle = "Let's Create Your Account";
   static const String signupSubtitle = "signupSubtitle";
   static const String firstName = "First Name";
   static const String lastName = "Last Name";
@@ -36,10 +36,11 @@ class MyTexts{
   static const String changeYourPasswordSubtitle = "Your Account Security is Our Priority! we've Sent You a Secure Link to Safely";
   static const String forgetPasswordSubtitle ="Don't worry sometimes people can forget too, enter your email and we will send you";
   static const String confirmEmail ="Verify your email address!";
-  static const String confirmEmailSubtitle = "Congratulations Your Account Awaits: Verify Your Email to Start Shopping and Experi";
+  static const String confirmEmailSubtitle = "Congratulations Your Account Awaits: Verify Your Email to Start Shopping and Experience a word of Unrivalled Deals and Personalized Offers.";
   static const String emailNotReceivedMessage = "Didn't get the email? Check your junk/span or resend it.";
-  static const String yourAccountCreatedTitle= "Your account successfully created!";
-  static const String yourAccountCreatedSubTitle ="Welcome to Your Ultimate Shopping Destination: Your Account is Created,Unleas";
+  static const String yourAccountCreatedTitle= "Your account created successfully!";
+  static const String yourAccountCreatedSubTitle ="Welcome to Your Ultimate Shopping Destination: Your Account is Created, Unleash the Joy of Seamless Online Shopping!";
+  static const String mContinue ="Continue";
 
 
 
@@ -50,4 +51,9 @@ class MyTexts{
   static const String signIn = "Sign In";
   static const String phoneNumber = "Phone Number";
 
+  // Arguments
+  static const String titleArg = "title";
+  static const String supTitleArg = "supTitle";
+  static const String imageArg = "image";
+  static const String onPressedArg = "onPressed";
 }
