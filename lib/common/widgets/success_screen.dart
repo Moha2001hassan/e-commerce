@@ -19,7 +19,7 @@ class SuccessScreen extends StatelessWidget {
       appBar: AppBar(automaticallyImplyLeading: false),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(13),
+          padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 24),
           child: Column(
             children: [
               // Image

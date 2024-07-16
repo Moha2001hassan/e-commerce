@@ -3,6 +3,7 @@ import 'package:e_commerce/utils/helpers/navigation.dart';
 import 'package:e_commerce/utils/routing/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import '../../../../utils/constants/text_strings.dart';
 import '../../../../utils/helpers/screen_util.dart';
 
@@ -51,7 +52,12 @@ class ResetPassword extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () => context.pushNamed(Routes.loginScreen),
+                onPressed: () {
+                  context.pushNamedAndRemoveUntil(
+                    Routes.loginScreen,
+                    predicate: ModalRoute.withName(Routes.loginScreen),
+                  );
+                },
                 child: const Text(MyTexts.done),
               ),
             ),

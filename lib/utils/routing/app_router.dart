@@ -7,6 +7,7 @@ import '../../common/widgets/success_screen.dart';
 import '../../features/authentication/screens/login/login.dart';
 import '../../features/authentication/screens/onboarding/onboarding.dart';
 import '../../features/authentication/screens/signup/signup.dart';
+import '../../navigation_menu.dart';
 import '../constants/text_strings.dart';
 import 'routes.dart';
 
@@ -41,6 +42,9 @@ class AppRouter {
 
       case Routes.resetPasswordScreen:
         return MaterialPageRoute(builder: (_) => const ResetPassword());
+
+      case Routes.navigationMenu:
+        return MaterialPageRoute(builder: (_) => const NavigationMenu());
 
       default:
         return MaterialPageRoute(builder: (_) => const OnBoarding());
