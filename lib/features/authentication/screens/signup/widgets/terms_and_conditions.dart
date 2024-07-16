@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/text_strings.dart';
 import '../../../../../utils/helpers/my_helper_functions.dart';
@@ -31,38 +32,34 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
           ),
         ),
         const SizedBox(width: 12),
-        Text.rich(TextSpan(
-          children: [
-            TextSpan(
-                text: "${MyTexts.iAgreeTo} ",
-                style: Theme.of(context)
-                    .textTheme
-                    .bodySmall!
-                    .copyWith(fontSize: 13)),
-            TextSpan(
-                text: MyTexts.privacyPolicy,
-                style: Theme.of(context).textTheme.bodyMedium!.apply(
-                      color: dark ? MyColors.textWhite : MyColors.primary,
-                      decoration: TextDecoration.underline,
-                      decorationColor:
-                          dark ? MyColors.textWhite : MyColors.primary,
-                    )),
-            TextSpan(
-                text: " ${MyTexts.and} ",
-                style: Theme.of(context)
-                    .textTheme
-                    .bodySmall!
-                    .copyWith(fontSize: 13)),
-            TextSpan(
-                text: MyTexts.termsOfUse,
-                style: Theme.of(context).textTheme.bodyMedium!.apply(
-                      color: dark ? MyColors.textWhite : MyColors.primary,
-                      decoration: TextDecoration.underline,
-                      decorationColor:
-                          dark ? MyColors.textWhite : MyColors.primary,
-                    )),
-          ],
-        )),
+        Expanded(
+          child: Text.rich(TextSpan(
+            children: [
+              TextSpan(
+                  text: "${MyTexts.iAgreeTo} ",
+                  style: Theme.of(context).textTheme.bodySmall),
+              TextSpan(
+                  text: MyTexts.privacyPolicy,
+                  style: Theme.of(context).textTheme.bodyMedium!.apply(
+                        color: dark ? MyColors.textWhite : MyColors.primary,
+                        decoration: TextDecoration.underline,
+                        decorationColor:
+                            dark ? MyColors.textWhite : MyColors.primary,
+                      )),
+              TextSpan(
+                  text: " ${MyTexts.and} ",
+                  style: Theme.of(context).textTheme.bodySmall),
+              TextSpan(
+                  text: MyTexts.termsOfUse,
+                  style: Theme.of(context).textTheme.bodyMedium!.apply(
+                        color: dark ? MyColors.textWhite : MyColors.primary,
+                        decoration: TextDecoration.underline,
+                        decorationColor:
+                            dark ? MyColors.textWhite : MyColors.primary,
+                      )),
+            ],
+          )),
+        ),
       ],
     );
   }

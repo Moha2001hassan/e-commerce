@@ -70,13 +70,13 @@ class _LoginFormState extends State<LoginForm> {
                 // Forget Password
                 TextButton(
                   onPressed: () {
-
+                    context.pushNamed(Routes.forgetPasswordScreen);
                   },
                   child: const Text(MyTexts.forgetPassword),
                 ),
               ],
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 23),
 
             // Sign In Button
             SizedBox(
@@ -86,7 +86,7 @@ class _LoginFormState extends State<LoginForm> {
                 child: const Text(MyTexts.signIn),
               ),
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 12),
 
             // Create Account Button
             SizedBox(
@@ -98,7 +98,7 @@ class _LoginFormState extends State<LoginForm> {
                 child: const Text(MyTexts.createAccount),
               ),
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 23),
           ],
         ),
       ),

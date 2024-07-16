@@ -5,6 +5,7 @@ class MyImages{
   static const String loginImg = "assets/images/login_img.png";
   static const String verifyEmailImg = "assets/images/verify_email_img.png";
   static const String verifyEmailSuccess = "assets/images/verify_success.png";
+  static const String resetPassword = "assets/images/reset_password.png";
 
   // Icons
   static const String facebookLogo = "assets/icons/facebook.png";

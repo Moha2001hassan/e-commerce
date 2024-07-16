@@ -1,3 +1,5 @@
+import 'package:e_commerce/features/authentication/screens/password_configuration/forget_password.dart';
+import 'package:e_commerce/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:e_commerce/features/authentication/screens/signup/verify_email.dart';
 import 'package:flutter/material.dart';
 
@@ -33,6 +35,12 @@ class AppRouter {
             onPressed: args[MyTexts.onPressedArg],
           ),
         );
+
+      case Routes.forgetPasswordScreen:
+        return MaterialPageRoute(builder: (_) => const ForgetPassword());
+
+      case Routes.resetPasswordScreen:
+        return MaterialPageRoute(builder: (_) => const ResetPassword());
 
       default:
         return MaterialPageRoute(builder: (_) => const OnBoarding());

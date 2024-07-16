@@ -31,6 +31,7 @@ class TTextFormFieldTheme {
       borderRadius: BorderRadius.circular(14),
       borderSide: const BorderSide(color: Colors.orange, width: 2),
     ),
+    contentPadding: const EdgeInsets.symmetric(vertical: 15),
   );
 
   // dark theme
@@ -62,5 +63,6 @@ class TTextFormFieldTheme {
       borderRadius: BorderRadius.circular(14),
       borderSide: const BorderSide(color: Colors.orange, width: 2),
     ),
+    contentPadding: const EdgeInsets.symmetric(vertical: 15),
   );
 }

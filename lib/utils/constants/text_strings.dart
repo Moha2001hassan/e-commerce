@@ -33,7 +33,7 @@ class MyTexts{
 
   // Confirm Email
   static const String changeYourPasswordTitle="Password Reset Email Sent";
-  static const String changeYourPasswordSubtitle = "Your Account Security is Our Priority! we've Sent You a Secure Link to Safely";
+  static const String changeYourPasswordSubtitle = "Your Account Security is Our Priority! we've Sent You a Secure Link to Safely Change Your Password and Keep Your Account Protected.";
   static const String forgetPasswordSubtitle ="Don't worry sometimes people can forget too, enter your email and we will send you";
   static const String confirmEmail ="Verify your email address!";
   static const String confirmEmailSubtitle = "Congratulations Your Account Awaits: Verify Your Email to Start Shopping and Experience a word of Unrivalled Deals and Personalized Offers.";
@@ -50,6 +50,9 @@ class MyTexts{
   static const String password = "Password";
   static const String signIn = "Sign In";
   static const String phoneNumber = "Phone Number";
+  static const String submit = "Submit";
+  static const String done = "Done";
+  static const String resendPassword ="Resend Password";
 
   // Arguments
   static const String titleArg = "title";
