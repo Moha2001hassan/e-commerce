@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
+import 'features/shop/screens/home/home.dart';
+import 'features/shop/screens/profile/profile.dart';
+import 'features/shop/screens/store/store.dart';
+import 'features/shop/screens/wishlist/wishlist.dart';
 import 'utils/helpers/my_helper_functions.dart';
 
 class NavigationMenu extends StatefulWidget {
@@ -13,11 +17,12 @@ class NavigationMenu extends StatefulWidget {
 class _NavigationMenuState extends State<NavigationMenu> {
   var _currentIndex = 0;
 
-  final List<String> _labels = [
-    "Home",
-    "Store",
-    "Wishlist",
-    "Profile",
+  // List of widgets corresponding to each navigation destination
+  final List<Widget> _pages = [
+    const HomeScreen(),
+    const StoreScreen(),
+    const WishlistScreen(),
+    const ProfileScreen(),
   ];
 
   @override
@@ -27,7 +32,9 @@ class _NavigationMenuState extends State<NavigationMenu> {
       bottomNavigationBar: NavigationBar(
         height: 70,
         backgroundColor: dark ? Colors.black : Colors.white,
-        indicatorColor: dark ? Colors.white.withOpacity(0.1) : Colors.black.withOpacity(0.1),
+        indicatorColor: dark
+            ? Colors.white.withOpacity(0.1)
+            : Colors.black.withOpacity(0.1),
         //elevation: 0,
         selectedIndex: _currentIndex,
         onDestinationSelected: (index) {
@@ -42,12 +49,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
           NavigationDestination(icon: Icon(Iconsax.user), label: "Profile"),
         ],
       ),
-      body: Center(
-        child: Text(
-          _labels[_currentIndex],
-          style: TextStyle(fontSize: 24),
-        ),
-      ),
+      body: _pages[_currentIndex],
     );
   }
 }
