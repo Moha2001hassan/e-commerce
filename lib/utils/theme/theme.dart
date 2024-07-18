@@ -3,6 +3,7 @@ import 'package:e_commerce/utils/theme/custom_themes/outlined_button_theme.dart'
 import 'package:e_commerce/utils/theme/custom_themes/text_theme.dart';
 import 'package:flutter/material.dart';
 
+import 'custom_themes/appbar_theme.dart';
 import 'custom_themes/checkbox_theme.dart';
 import 'custom_themes/text_field_theme.dart';
 
@@ -20,10 +21,7 @@ class TAppTheme {
     inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
     elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
     outlinedButtonTheme: TOutLinedButtonTheme.lightOutlinedButtonTheme,
-    appBarTheme: const AppBarTheme(
-      color: Colors.white,
-      actionsIconTheme: IconThemeData(color: Colors.black),
-    ),
+    appBarTheme: MyAppBarTheme.lightAppBarTheme,
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -37,9 +35,6 @@ class TAppTheme {
     inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
     elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
     outlinedButtonTheme: TOutLinedButtonTheme.darkOutlinedButtonTheme,
-    appBarTheme: const AppBarTheme(
-      color: Colors.black,
-      actionsIconTheme: IconThemeData(color: Colors.white),
-    ),
+    appBarTheme: MyAppBarTheme.darkAppBarTheme,
   );
 }

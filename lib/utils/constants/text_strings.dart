@@ -42,6 +42,9 @@ class MyTexts{
   static const String yourAccountCreatedSubTitle ="Welcome to Your Ultimate Shopping Destination: Your Account is Created, Unleash the Joy of Seamless Online Shopping!";
   static const String mContinue ="Continue";
 
+  // Home
+  static const String homeAppbarTitle ="Good day for Shopping";
+  static const String homeAppbarSupTitle ="Mohamed Hassan";
 
 
   // Common
