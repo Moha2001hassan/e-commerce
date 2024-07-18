@@ -1,4 +1,4 @@
-class TSizes{
+class MySizes{
   // padding & margin sizes
   static const double xs = 4;
   static const double sm = 8;
@@ -16,4 +16,19 @@ class TSizes{
   static const double productImgSize = 120;
   static const double productImgRadius = 160;
   static const double productImgLg = 240;
+
+  // AppBar height
+  static const double appBarHeight = 56;
+
+  // Image Size
+  static const double imageThumbSize = 80;
+
+  // Default Spacing between sections
+  static const double defaultSpace = 24;
+  static const double spaceBtwItems = 24;
+  static const double spaceBtwSections = 24;
+
+  static const double productImageSize = 120;
+  static const double productImageRadius = 16;
+  static const double productImageHeight = 160;
 }
