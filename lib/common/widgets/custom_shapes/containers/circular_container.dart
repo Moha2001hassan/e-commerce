@@ -9,12 +9,14 @@ class CircularContainer extends StatelessWidget {
     this.padding = 0,
     this.backgroundColor = Colors.white,
     this.child,
+    this.margin,
   });
 
   final double? width;
   final double? height;
   final double radius;
   final double padding;
+  final EdgeInsets? margin;
   final Widget? child;
   final Color backgroundColor;
 
@@ -24,6 +26,7 @@ class CircularContainer extends StatelessWidget {
       width: width,
       height: height,
       padding: EdgeInsets.all(padding),
+      margin: margin,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(radius),
         color: backgroundColor,

@@ -29,8 +29,8 @@ class VerticalImageText extends StatelessWidget {
           children: [
             // Circular Icon
             Container(
-              width: 57,
-              height: 57,
+              width: 53,
+              height: 53,
               padding: const EdgeInsets.all(MySizes.sm),
               decoration: BoxDecoration(
                 color: backgroundColor ?? (dark ? Colors.black : Colors.white),
@@ -44,7 +44,7 @@ class VerticalImageText extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: MySizes.spaceBtwItems / 2),
+            const SizedBox(height: MySizes.spaceBtwItems / 3),
 
             // Text
             SizedBox(
