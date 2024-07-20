@@ -1,9 +1,12 @@
 import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
-import '../../../../common/widgets/section_heading.dart';
+import '../../../../common/widgets/grid_layout.dart';
+import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
+import '../../../../common/widgets/texts/section_heading.dart';
 import 'widgets/home_appbar.dart';
 import 'widgets/home_categories.dart';
 import 'widgets/promo_slider.dart';
@@ -18,12 +21,12 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             // Header
-            PrimaryHeaderContainer(
+            const PrimaryHeaderContainer(
               child: Column(
                 children: [
                   // Appbar
@@ -58,13 +61,24 @@ class _HomeScreenState extends State<HomeScreen> {
 
             // Body
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              child: PromoSlider(
-                banners: [
-                  MyImages.loginImg,
-                  MyImages.verifyEmailImg,
-                  MyImages.verifyEmailSuccess,
-                  MyImages.resetPassword,
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+              child: Column(
+                children: [
+                  // Promo Slider and Indicator
+                  const PromoSlider(
+                    banners: [
+                      MyImages.loginImg,
+                      MyImages.verifyEmailImg,
+                      MyImages.verifyEmailSuccess,
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+
+                  // Popular Products
+                  GridLayout(
+                    itemCount: 4,
+                    itemBuilder: (_, index) => const ProductCardVertical(),
+                  ),
                 ],
               ),
             )

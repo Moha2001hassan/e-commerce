@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/sizes.dart';
 
@@ -31,24 +32,27 @@ class RoundedImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: height,
-      width: width,
-      padding: padding,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(borderRadius),
-        border: border,
-        color: backgroundColor,
-      ),
-      child: ClipRRect(
-        borderRadius: applyImgRadius
-            ? BorderRadius.circular(MySizes.md)
-            : BorderRadius.zero,
-        child: Image(
-          fit: fit,
-          image: isNetworkImage
-              ? NetworkImage(imgUrl)
-              : AssetImage(imgUrl) as ImageProvider,
+    return GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        height: height,
+        width: width,
+        padding: padding,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(borderRadius),
+          border: border,
+          color: backgroundColor,
+        ),
+        child: ClipRRect(
+          borderRadius: applyImgRadius
+              ? BorderRadius.circular(MySizes.md)
+              : BorderRadius.zero,
+          child: Image(
+            fit: fit,
+            image: isNetworkImage
+                ? NetworkImage(imgUrl)
+                : AssetImage(imgUrl) as ImageProvider,
+          ),
         ),
       ),
     );

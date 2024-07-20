@@ -29,6 +29,14 @@ class MyColors{
   static const Color success = Color(0xff388E3C);
   static const Color warning = Color(0xffF57C00);
   static const Color info = Color(0xff1976D2);
+
+  // Shade
+  static const Color black = Color(0xff232323);
+  static const Color darkerGrey = Color(0xff4F4F4F);
+  static const Color darkGrey = Color(0xff939393);
+  static const Color grey = Color(0xffE0E0E0);
+  static const Color softGrey = Color(0xffF4F4F4);
+  static const Color lightGrey = Color(0xffF9F9F9);
 }
 
 
