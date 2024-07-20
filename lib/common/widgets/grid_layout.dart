@@ -5,7 +5,7 @@ class GridLayout extends StatelessWidget {
     super.key,
     required this.itemCount,
     required this.itemBuilder,
-    this.mainAxisExtent = 260,
+    this.mainAxisExtent = 255,
   });
 
   final int itemCount;
@@ -21,7 +21,7 @@ class GridLayout extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        mainAxisSpacing: 10,
+        mainAxisSpacing: 9,
         crossAxisSpacing: 8,
         mainAxisExtent: mainAxisExtent,
       ),

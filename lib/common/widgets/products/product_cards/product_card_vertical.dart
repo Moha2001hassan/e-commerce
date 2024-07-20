@@ -5,6 +5,7 @@ import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+
 import '../../../../utils/helpers/my_helper_functions.dart';
 import '../../circular_icon.dart';
 import '../../custom_shapes/containers/rounded_container.dart';
@@ -22,7 +23,7 @@ class ProductCardVertical extends StatelessWidget {
       onTap: () {},
       child: Container(
         width: 180,
-        padding: const EdgeInsets.all(1),
+        padding: const EdgeInsets.all(0.5),
         decoration: BoxDecoration(
           color: dark ? MyColors.darkGrey : Colors.white,
           borderRadius: BorderRadius.circular(MySizes.productImageRadius),
@@ -38,8 +39,11 @@ class ProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   // Thumbnail Image
-                  const RoundedImage(
-                      imgUrl: MyImages.verifyEmailImg, applyImgRadius: true),
+                  RoundedImage(
+                    imgUrl: MyImages.shoesImg,
+                    applyImgRadius: true,
+                    backgroundColor: dark ? MyColors.dark : MyColors.light,
+                  ),
 
                   // Sale Tag
                   Positioned(
@@ -63,8 +67,8 @@ class ProductCardVertical extends StatelessWidget {
                   const Positioned(
                     top: 0,
                     right: 0,
-                    child:
-                        CircularIcon(icon: Iconsax.heart5, color: Colors.red),
+                    child: CircularIcon(
+                        icon: Iconsax.heart5, color: Colors.red),
                   ),
                 ],
               ),
@@ -77,7 +81,8 @@ class ProductCardVertical extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Title
-                  const ProductTitleText(title: "Green Nike Air Shoes", smallSize: true),
+                  const ProductTitleText(
+                      title: "Green Nike Air Shoes", smallSize: true),
                   const SizedBox(height: 8),
 
                   // brand name
@@ -90,39 +95,43 @@ class ProductCardVertical extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                       ),
                       const SizedBox(width: MySizes.xs),
-                      const Icon(Iconsax.verify5, color: MyColors.primary, size: MySizes.iconXs),
+                      const Icon(Iconsax.verify5,
+                          color: MyColors.primary, size: MySizes.iconXs),
                     ],
                   ),
-
-                  // Price & Add Button
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // Price
-                      const ProductPrice(price: '53', isLarge: true),
-
-                      // Add to Card Button
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: MyColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(12),
-                            bottomRight: Radius.circular(12),
-                          ),
-                        ),
-                        child: const SizedBox(
-                          width: 30,
-                          height: 30,
-                          child: Center(
-                            child: Icon(Iconsax.add, color: Colors.white),
-                          ),
-                        ),
-                      ),
-                    ],
-                  )
                 ],
               ),
-            )
+            ),
+
+            // Price & Add Button
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // Price
+                const Padding(
+                  padding: EdgeInsets.only(left: 8.0),
+                  child: ProductPrice(price: '53', isLarge: true),
+                ),
+
+                // Add to Card Button
+                Container(
+                  decoration: const BoxDecoration(
+                    color: MyColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(12),
+                      bottomRight: Radius.circular(12),
+                    ),
+                  ),
+                  child: const SizedBox(
+                    width: 32,
+                    height: 32,
+                    child: Center(
+                      child: Icon(Iconsax.add, color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),

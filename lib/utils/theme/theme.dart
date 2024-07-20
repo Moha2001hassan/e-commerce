@@ -3,6 +3,7 @@ import 'package:e_commerce/utils/theme/custom_themes/outlined_button_theme.dart'
 import 'package:e_commerce/utils/theme/custom_themes/text_theme.dart';
 import 'package:flutter/material.dart';
 
+import '../constants/colors.dart';
 import 'custom_themes/appbar_theme.dart';
 import 'custom_themes/checkbox_theme.dart';
 import 'custom_themes/text_field_theme.dart';
@@ -15,7 +16,7 @@ class TAppTheme {
     fontFamily: 'Poppins',
     brightness: Brightness.light,
     primaryColor: Colors.blue,
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: MyColors.white12,
     textTheme: MyTextTheme.lightTextTheme,
     checkboxTheme: TCheckboxTheme.lightCheckboxTheme,
     inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,

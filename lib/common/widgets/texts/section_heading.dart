@@ -5,7 +5,7 @@ class MySectionHeading extends StatelessWidget {
     super.key,
     this.textColor,
     required this.title,
-    this.buttonTitle = "View all",
+    this.buttonTitle = "View All",
     this.showActionButton = true,
     this.onPressed,
   });
@@ -28,6 +28,7 @@ class MySectionHeading extends StatelessWidget {
               .headlineSmall!
               .apply(color: textColor),
         ),
+        const Spacer(),
         if (showActionButton) TextButton(onPressed: () {}, child: Text(buttonTitle)),
       ],
     );

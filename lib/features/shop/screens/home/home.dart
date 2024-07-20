@@ -67,12 +67,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   // Promo Slider and Indicator
                   const PromoSlider(
                     banners: [
-                      MyImages.loginImg,
-                      MyImages.verifyEmailImg,
-                      MyImages.verifyEmailSuccess,
+                      MyImages.banner1,
+                      MyImages.banner2,
+                      MyImages.banner3,
                     ],
                   ),
                   const SizedBox(height: 20),
+
+                  MySectionHeading(title: "Popular Products", onPressed: (){}),
 
                   // Popular Products
                   GridLayout(

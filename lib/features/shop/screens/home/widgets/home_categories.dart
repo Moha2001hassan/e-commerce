@@ -17,7 +17,7 @@ class MyHomeCategories extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (_, index) {
           return VerticalImageText(
-            image: MyImages.googleLogo,
+            image: MyImages.shoesIcon,
             title: 'Shoes',
             onTap: () {},
           );
