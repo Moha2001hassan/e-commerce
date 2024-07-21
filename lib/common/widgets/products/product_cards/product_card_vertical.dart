@@ -25,7 +25,7 @@ class ProductCardVertical extends StatelessWidget {
         width: 180,
         padding: const EdgeInsets.all(0.5),
         decoration: BoxDecoration(
-          color: dark ? MyColors.darkGrey : Colors.white,
+          color: dark ? MyColors.darkerGrey : Colors.white,
           borderRadius: BorderRadius.circular(MySizes.productImageRadius),
           boxShadow: [ShadowStyle.verticalProductShadow],
         ),
@@ -73,6 +73,7 @@ class ProductCardVertical extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(height: 1),
 
             // Details
             Padding(
@@ -81,8 +82,7 @@ class ProductCardVertical extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Title
-                  const ProductTitleText(
-                      title: "Green Nike Air Shoes", smallSize: true),
+                  const ProductTitleText(title: "Green Nike Air Shoes", smallSize: true),
                   const SizedBox(height: 8),
 
                   // brand name

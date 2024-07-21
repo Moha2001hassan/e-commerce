@@ -14,12 +14,15 @@ class MySearchContainer extends StatelessWidget {
     this.showBorder = true,
     this.showBackground = true,
     this.onTap,
-  });
+    EdgeInsetsGeometry? margin,
+  }) : margin = margin ?? const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace);
+
 
   final String text;
   final IconData icon;
   final bool showBorder, showBackground;
   final VoidCallback? onTap;
+  final EdgeInsetsGeometry margin;
 
   @override
   Widget build(BuildContext context) {
@@ -28,21 +31,24 @@ class MySearchContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
+        height: 50,
         width: ScreenUtil().screenWidth,
         padding: const EdgeInsets.all(16),
-        margin: const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace),
+        //margin: const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace),
+        margin: margin,
         decoration: BoxDecoration(
           color: showBackground
               ? dark
-                  ? Colors.black
-                  : Colors.white
+                  ? MyColors.dark
+                  : MyColors.light
               : Colors.transparent,
           borderRadius: BorderRadius.circular(16),
-          border: showBorder ? Border.all(color: MyColors.borderPrimary) : null,
+          border: showBorder ? Border.all(color: MyColors.grey) : null,
         ),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Icon(Iconsax.search_normal, color: Colors.grey),
+            Icon(icon, color: Colors.grey, size: 19),
             const SizedBox(width: 12),
             Text(text, style: Theme.of(context).textTheme.bodySmall)
           ],

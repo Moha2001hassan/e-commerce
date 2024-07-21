@@ -10,6 +10,7 @@ class MyImages{
   static const String banner2 = "assets/images/banner2.jpg";
   static const String banner3 = "assets/images/banner3.jpg";
   static const String shoesImg = "assets/images/shoes_img.png";
+  static const String clothesIcon = "assets/icons/clothes_icon.png";
 
 
   // Icons
