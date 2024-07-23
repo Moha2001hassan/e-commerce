@@ -16,7 +16,7 @@ class TAppTheme {
     fontFamily: 'Poppins',
     brightness: Brightness.light,
     primaryColor: Colors.blue,
-    scaffoldBackgroundColor: MyColors.white12,
+    scaffoldBackgroundColor: MyColors.white,
     textTheme: MyTextTheme.lightTextTheme,
     checkboxTheme: TCheckboxTheme.lightCheckboxTheme,
     inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,

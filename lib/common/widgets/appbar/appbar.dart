@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const MyAppBar(
-      {super.key,
-      this.title,
-      this.showBackArrow = false,
-      this.leadingIcon,
-      this.actions,
-      this.leadingOnPressed});
+  const MyAppBar({
+    super.key,
+    this.title,
+    this.showBackArrow = false,
+    this.leadingIcon,
+    this.actions,
+    this.leadingOnPressed,
+  });
 
   final Widget? title;
   final bool showBackArrow;
@@ -19,7 +20,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
       child: AppBar(
         automaticallyImplyLeading: false,
         title: title,
