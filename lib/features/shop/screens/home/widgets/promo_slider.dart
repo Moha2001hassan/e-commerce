@@ -34,6 +34,8 @@ class _PromoSliderState extends State<PromoSlider> {
               .map((url) => RoundedImage(imgUrl: url, fit: BoxFit.cover)).toList(),
         ),
         const SizedBox(height: 17),
+
+        // Indicator
         Row(
           mainAxisSize: MainAxisSize.min,
           children: List.generate(widget.banners.length, (index) {

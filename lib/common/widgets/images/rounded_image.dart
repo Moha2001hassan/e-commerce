@@ -7,8 +7,8 @@ class RoundedImage extends StatelessWidget {
   const RoundedImage({
     super.key,
     required this.imgUrl,
-    this.width = 315,
-    this.height = 167,
+    this.width = 390,
+    this.height = 160,
     this.backgroundColor = MyColors.light,
     this.borderRadius = MySizes.md,
     this.applyImgRadius = true,
