@@ -1,6 +1,7 @@
 import 'package:e_commerce/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:e_commerce/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:e_commerce/features/authentication/screens/signup/verify_email.dart';
+import 'package:e_commerce/features/personalization/screens/profile/profile.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/widgets/success_screen.dart';
@@ -25,6 +26,9 @@ class AppRouter {
 
       case Routes.verifyEmailScreen:
         return MaterialPageRoute(builder: (_) => const VerifyEmailScreen());
+
+      case Routes.profileScreen:
+        return MaterialPageRoute(builder: (_) => const ProfileScreen());
 
       case Routes.successScreen:
         final args = settings.arguments as Map<String, dynamic>;

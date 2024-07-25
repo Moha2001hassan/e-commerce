@@ -1,3 +1,5 @@
+import 'package:e_commerce/utils/helpers/navigation.dart';
+import 'package:e_commerce/utils/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../../../common/widgets/images/circular_image.dart';
@@ -19,7 +21,7 @@ class UserProfileTile extends StatelessWidget {
         style: Theme.of(context).textTheme.bodySmall!.apply(color: Colors.white),
       ),
       trailing: IconButton(
-        onPressed: () {},
+        onPressed: () => context.pushNamed(Routes.profileScreen),
         icon: const Icon(Iconsax.edit, color: Colors.white),
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:e_commerce/utils/helpers/my_helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -22,14 +23,26 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
       child: AppBar(
-        automaticallyImplyLeading: false,
+        automaticallyImplyLeading: showBackArrow,
         title: title,
         actions: actions,
-        leading: showBackArrow
-            ? IconButton(onPressed: () {}, icon: const Icon(Iconsax.arrow_left))
-            : leadingIcon != null
-                ? IconButton(onPressed: leadingOnPressed, icon: Icon(leadingIcon))
-                : null,
+        // leading: showBackArrow
+        //     ? IconButton(
+        //         onPressed: () {},
+        //         icon: Icon(
+        //           Iconsax.arrow_left,
+        //           color: isDarkMode ? Colors.white : Colors.black,
+        //         ),
+        //       )
+        //     : leadingIcon != null
+        //         ? IconButton(
+        //             onPressed: leadingOnPressed,
+        //             icon: Icon(
+        //               leadingIcon,
+        //               color: isDarkMode ? Colors.white : Colors.black,
+        //             ),
+        //           )
+        //         : null,
       ),
     );
   }
