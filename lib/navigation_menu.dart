@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
+import 'features/personalization/screens/settings/settings.dart';
 import 'features/shop/screens/home/home.dart';
-import 'features/shop/screens/profile/profile.dart';
+import 'features/personalization/screens/profile/profile.dart';
 import 'features/shop/screens/store/store.dart';
 import 'features/shop/screens/wishlist/wishlist.dart';
 import 'utils/helpers/my_helper_functions.dart';
@@ -22,7 +23,8 @@ class _NavigationMenuState extends State<NavigationMenu> {
     const HomeScreen(),
     const StoreScreen(),
     const WishlistScreen(),
-    const ProfileScreen(),
+    const SettingsScreen(),
+    //const ProfileScreen(),
   ];
 
   @override
@@ -46,7 +48,8 @@ class _NavigationMenuState extends State<NavigationMenu> {
           NavigationDestination(icon: Icon(Iconsax.home), label: "Home"),
           NavigationDestination(icon: Icon(Iconsax.shop), label: "Store"),
           NavigationDestination(icon: Icon(Iconsax.heart), label: "Wishlist"),
-          NavigationDestination(icon: Icon(Iconsax.user), label: "Profile"),
+          NavigationDestination(icon: Icon(Iconsax.user), label: "Settings"),
+          //NavigationDestination(icon: Icon(Iconsax.user), label: "Profile"),
         ],
       ),
       body: _pages[_currentIndex],
