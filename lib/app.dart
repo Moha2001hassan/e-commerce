@@ -1,3 +1,4 @@
+import 'package:e_commerce/utils/helpers/my_helper_functions.dart';
 import 'package:e_commerce/utils/helpers/screen_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -13,11 +14,14 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = MyHelperFunctions.isDarkMode(context);
     // Set the status bar text color to black
     SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
-        statusBarColor: Colors.blue, // Make status bar transparent
-        statusBarIconBrightness: Brightness.dark, // Set text/icons to dark
+      SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent, // Make status bar transparent
+        statusBarIconBrightness: isDark
+            ? Brightness.light
+            : Brightness.dark, // Set text/icons to dark
       ),
     );
 

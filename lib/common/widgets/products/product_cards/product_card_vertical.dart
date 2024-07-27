@@ -3,6 +3,8 @@ import 'package:e_commerce/common/widgets/texts/product_title_text.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
+import 'package:e_commerce/utils/helpers/navigation.dart';
+import 'package:e_commerce/utils/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -21,7 +23,7 @@ class ProductCardVertical extends StatelessWidget {
     final dark = MyHelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: () {},
+      onTap: () => context.pushNamed(Routes.productDetails),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(0.5),
@@ -99,7 +101,7 @@ class ProductCardVertical extends StatelessWidget {
                 // Price
                 const Padding(
                   padding: EdgeInsets.only(left: 8.0),
-                  child: ProductPrice(price: '53', isLarge: true),
+                  child: ProductPriceText(price: '53', isLarge: true),
                 ),
 
                 // Add to Card Button

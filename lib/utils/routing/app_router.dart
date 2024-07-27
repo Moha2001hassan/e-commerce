@@ -2,6 +2,7 @@ import 'package:e_commerce/features/authentication/screens/password_configuratio
 import 'package:e_commerce/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:e_commerce/features/authentication/screens/signup/verify_email.dart';
 import 'package:e_commerce/features/personalization/screens/profile/profile.dart';
+import 'package:e_commerce/features/shop/screens/product_details/product_details.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/widgets/success_screen.dart';
@@ -29,6 +30,9 @@ class AppRouter {
 
       case Routes.profileScreen:
         return MaterialPageRoute(builder: (_) => const ProfileScreen());
+
+      case Routes.productDetails:
+        return MaterialPageRoute(builder: (_) => const ProductDetailsScreen());
 
       case Routes.successScreen:
         final args = settings.arguments as Map<String, dynamic>;
