@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 import 'custom_themes/appbar_theme.dart';
 import 'custom_themes/checkbox_theme.dart';
+import 'custom_themes/chip_theme.dart';
 import 'custom_themes/text_field_theme.dart';
 
 class TAppTheme {
@@ -23,6 +24,7 @@ class TAppTheme {
     elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
     outlinedButtonTheme: TOutLinedButtonTheme.lightOutlinedButtonTheme,
     appBarTheme: MyAppBarTheme.lightAppBarTheme,
+    chipTheme: MyChipTheme.lightChipTheme,
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -37,5 +39,6 @@ class TAppTheme {
     elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
     outlinedButtonTheme: TOutLinedButtonTheme.darkOutlinedButtonTheme,
     appBarTheme: MyAppBarTheme.darkAppBarTheme,
+    chipTheme: MyChipTheme.darkChipTheme,
   );
 }

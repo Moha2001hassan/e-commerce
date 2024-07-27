@@ -18,17 +18,14 @@ class MySectionHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           title,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
-          style: Theme.of(context)
-              .textTheme
-              .headlineSmall!
-              .apply(color: textColor),
+          style: Theme.of(context).textTheme.headlineSmall!.apply(color: textColor),
         ),
-        const Spacer(),
         if (showActionButton) TextButton(onPressed: () {}, child: Text(buttonTitle)),
       ],
     );
