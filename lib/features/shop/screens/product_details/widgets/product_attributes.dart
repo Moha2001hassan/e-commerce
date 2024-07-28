@@ -8,8 +8,17 @@ import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/helpers/my_helper_functions.dart';
 import 'package:flutter/material.dart';
 
-class ProductAttributes extends StatelessWidget {
+class ProductAttributes extends StatefulWidget {
   const ProductAttributes({super.key});
+
+  @override
+  State<ProductAttributes> createState() => _ProductAttributesState();
+}
+
+class _ProductAttributesState extends State<ProductAttributes> {
+  // Selected state for Colors and Sizes
+  String _selectedColor = 'Green';
+  String _selectedSize = 'EU 34';
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +34,16 @@ class ProductAttributes extends StatelessWidget {
               // Title, Price, Stock Status
               Row(
                 children: [
-                  Text('Variation', style: Theme.of(context).textTheme.headlineSmall),
+                  Text('Variation',
+                      style: Theme.of(context).textTheme.headlineSmall),
                   const SizedBox(width: MySizes.spaceBtwItems),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         children: [
-                          const ProductTitleText(title: 'Price :  ', smallSize: true),
+                          const ProductTitleText(
+                              title: 'Price :  ', smallSize: true),
 
                           // Actual Price
                           Text(
@@ -52,8 +63,10 @@ class ProductAttributes extends StatelessWidget {
                       // Stock
                       Row(
                         children: [
-                          const ProductTitleText(title: 'Stock : ', smallSize: true),
-                          Text('In Stock', style: Theme.of(context).textTheme.titleMedium),
+                          const ProductTitleText(
+                              title: 'Stock : ', smallSize: true),
+                          Text('In Stock',
+                              style: Theme.of(context).textTheme.titleMedium),
                         ],
                       ),
                     ],
@@ -62,43 +75,57 @@ class ProductAttributes extends StatelessWidget {
               ),
               const SizedBox(height: 4),
               const ProductTitleText(
-                title: 'This is the Description of the Product and it can go up to max 4 lines.',
+                title:
+                    'This is the Description of the Product and it can go up to max 4 lines.',
                 smallSize: true,
               ),
             ],
           ),
         ),
-        const SizedBox(height: MySizes.spaceBtwItems),
+        const Divider(),
 
-        // Attributes
+        // Colors
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const MySectionHeading(title: 'Colors'),
             const SizedBox(height: 4),
             Wrap(
-              children: [
-                MyChoiceChip(text: 'Green', selected: true, onSelected: (value) {}),
-                MyChoiceChip(text: 'Blue', selected: false, onSelected: (value) {}),
-                MyChoiceChip(text: 'Yellow', selected: false, onSelected: (value) {}),
-              ],
+              children: ['Green', 'Blue', 'Yellow'].map((color) {
+                return MyChoiceChip(
+                  text: color,
+                  selected: _selectedColor == color,
+                  onSelected: (selected) {
+                    setState(() {
+                      _selectedColor = color;
+                    });
+                  },
+                );
+              }).toList(),
             ),
           ],
         ),
+        const Divider(),
 
+        // Sizes
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const MySectionHeading(title: 'Size'),
             const SizedBox(height: 4),
-
             Wrap(
               spacing: 8,
-              children: [
-                MyChoiceChip(text: 'EU 34', selected: true, onSelected: (value) {}),
-                MyChoiceChip(text: 'EU 36', selected: false, onSelected: (value) {}),
-                MyChoiceChip(text: 'EU 38', selected: false, onSelected: (value) {}),
-              ],
+              children: ['EU 34', 'EU 36', 'EU 38'].map((size) {
+                return MyChoiceChip(
+                  text: size,
+                  selected: _selectedSize == size,
+                  onSelected: (selected) {
+                    setState(() {
+                      _selectedSize = size;
+                    });
+                  },
+                );
+              }).toList(),
             ),
           ],
         ),

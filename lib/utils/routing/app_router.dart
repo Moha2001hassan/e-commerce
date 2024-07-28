@@ -3,6 +3,7 @@ import 'package:e_commerce/features/authentication/screens/password_configuratio
 import 'package:e_commerce/features/authentication/screens/signup/verify_email.dart';
 import 'package:e_commerce/features/personalization/screens/profile/profile.dart';
 import 'package:e_commerce/features/shop/screens/product_details/product_details.dart';
+import 'package:e_commerce/features/shop/test_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/widgets/success_screen.dart';
@@ -53,6 +54,9 @@ class AppRouter {
 
       case Routes.navigationMenu:
         return MaterialPageRoute(builder: (_) => const NavigationMenu());
+
+      case Routes.testScreen:
+        return MaterialPageRoute(builder: (_) => const TestScreen());
 
       default:
         return MaterialPageRoute(builder: (_) => const OnBoarding());

@@ -37,8 +37,7 @@ class CircularIcon extends StatelessWidget {
                 ? MyColors.black.withOpacity(0.9)
                 : Colors.white.withOpacity(0.9),
       ),
-      child: IconButton(
-          onPressed: onPressed, icon: Icon(icon, size: size, color: color)),
+      child: IconButton(onPressed: onPressed, icon: Icon(icon, size: size, color: color)),
     );
   }
 }

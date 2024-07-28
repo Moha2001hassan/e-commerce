@@ -9,7 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../utils/helpers/my_helper_functions.dart';
-import '../../circular_icon.dart';
 import '../../custom_shapes/containers/rounded_container.dart';
 import '../../images/rounded_image.dart';
 import '../../texts/brand_title_with_icon.dart';
@@ -68,10 +67,15 @@ class ProductCardVertical extends StatelessWidget {
 
                   // Favorite Icon
                   const Positioned(
-                    top: 0,
-                    right: 0,
-                    child: CircularIcon(
-                        icon: Iconsax.heart5, color: Colors.red),
+                    top: 5,
+                    right: 5,
+                    child: Icon(
+                      //Iconsax.heart5,
+                      Iconsax.heart,
+                      color: Colors.red,
+                      //color: Colors.grey,
+                      size: 30,
+                    ),
                   ),
                 ],
               ),
@@ -85,7 +89,8 @@ class ProductCardVertical extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Title
-                  ProductTitleText(title: "Green Nike Air Shoes", smallSize: true),
+                  ProductTitleText(
+                      title: "Green Nike Air Shoes", smallSize: true),
                   SizedBox(height: 8),
 
                   // brand name
@@ -116,9 +121,8 @@ class ProductCardVertical extends StatelessWidget {
                   child: const SizedBox(
                     width: 32,
                     height: 32,
-                    child: Center(
-                      child: Icon(Iconsax.add, color: Colors.white),
-                    ),
+                    child:
+                        Center(child: Icon(Iconsax.add, color: Colors.white)),
                   ),
                 ),
               ],

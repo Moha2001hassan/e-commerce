@@ -1,6 +1,8 @@
 import 'package:e_commerce/common/widgets/circular_icon.dart';
 import 'package:e_commerce/common/widgets/grid_layout.dart';
 import 'package:e_commerce/common/widgets/products/product_cards/product_card_vertical.dart';
+import 'package:e_commerce/utils/helpers/navigation.dart';
+import 'package:e_commerce/utils/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -15,7 +17,7 @@ class WishlistScreen extends StatelessWidget {
       appBar: MyAppBar(
         title: Text("Wishlist", style: Theme.of(context).textTheme.headlineMedium),
         actions: [
-          CircularIcon(icon: Iconsax.add, onPressed: (){})
+          CircularIcon(icon: Iconsax.add, onPressed: () => context.pushNamed(Routes.testScreen))
         ],
       ),
       body: SingleChildScrollView(

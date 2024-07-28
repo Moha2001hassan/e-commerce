@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../../../../../utils/constants/sizes.dart';
 
@@ -18,15 +19,24 @@ class RatingAndShare extends StatelessWidget {
             Text.rich(
               TextSpan(
                 children: [
-                  TextSpan(text: '5.0', style: Theme.of(context).textTheme.bodyLarge),
-                  TextSpan(text: '(199)', style: Theme.of(context).textTheme.labelLarge),
+                  TextSpan(
+                      text: '5.0',
+                      style: Theme.of(context).textTheme.bodyLarge),
+                  TextSpan(
+                      text: '(199)',
+                      style: Theme.of(context).textTheme.labelLarge),
                 ],
               ),
             )
           ],
         ),
         // Share Button
-        IconButton(onPressed: () {}, icon: const Icon(Icons.share, size: MySizes.iconMd))
+        IconButton(
+          icon: const Icon(Icons.share, size: MySizes.iconMd),
+          onPressed: ()  {
+             Share.share("Hi Share this:  https://www.google.com");
+          },
+        )
       ],
     );
   }

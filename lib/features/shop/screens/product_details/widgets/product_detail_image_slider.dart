@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:like_button/like_button.dart';
 
 import '../../../../../common/widgets/appbar/appbar.dart';
-import '../../../../../common/widgets/circular_icon.dart';
 import '../../../../../common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 import '../../../../../common/widgets/images/rounded_image.dart';
 import '../../../../../utils/constants/colors.dart';
@@ -45,7 +45,7 @@ class ProductImageSlider extends StatelessWidget {
                   separatorBuilder: (_, __) => const SizedBox(width: 12),
                   itemBuilder: (_, index) => RoundedImage(
                     width: 70,
-                    imgUrl: MyImages.loginImg,
+                    imgUrl: MyImages.shoesImg,
                     padding: const EdgeInsets.all(MySizes.sm),
                     border: Border.all(color: MyColors.primary),
                     backgroundColor: isDark ? MyColors.dark : Colors.white,
@@ -55,9 +55,20 @@ class ProductImageSlider extends StatelessWidget {
             ),
 
             // AppBar Icon
-            const MyAppBar(
+             MyAppBar(
               showBackArrow: true,
-              actions: [CircularIcon(icon: Iconsax.heart5, color: Colors.red)],
+              actions: [
+                LikeButton(
+                    size: 40,
+                  likeBuilder: (bool isLiked) {
+                    return Icon(
+                      isLiked ? Iconsax.heart5 : Iconsax.heart,
+                      color: isLiked ? Colors.red : Colors.grey,
+                      size: 40.0,
+                    );
+                  },
+                )
+              ],
             ),
           ],
         ),

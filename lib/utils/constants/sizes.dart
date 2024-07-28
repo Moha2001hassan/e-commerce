@@ -31,4 +31,10 @@ class MySizes{
   static const double productImageSize = 120;
   static const double productImageRadius = 16;
   static const double productImageHeight = 160;
+
+  static const double cardRadiusLg = 16;
+  static const double cardRadiusMd = 12;
+  static const double cardRadiusSm = 10;
+
+
 }
