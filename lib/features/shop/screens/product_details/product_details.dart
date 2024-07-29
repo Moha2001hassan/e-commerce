@@ -2,9 +2,12 @@ import 'package:e_commerce/common/widgets/texts/section_heading.dart';
 import 'package:e_commerce/features/shop/screens/product_details/widgets/bottom_add_to_cart.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
+import 'package:e_commerce/utils/helpers/navigation.dart';
+import 'package:e_commerce/utils/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
+
 import 'widgets/product_attributes.dart';
 import 'widgets/product_detail_image_slider.dart';
 import 'widgets/product_meta_data.dart';
@@ -60,22 +63,30 @@ class ProductDetailsScreen extends StatelessWidget {
                       trimMode: TrimMode.Line,
                       trimCollapsedText: 'Show more',
                       trimExpandedText: '  Less',
-                      moreStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: MyColors.primary),
-                      lessStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: MyColors.primary),
+                      moreStyle: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w800,
+                          color: MyColors.primary),
+                      lessStyle: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w800,
+                          color: MyColors.primary),
                     ),
 
                     // Reviews
                     const Divider(),
                     //const SizedBox(height: 1),
-                     Row(
-                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const MySectionHeading(title: 'Reviews (199)', showActionButton: false),
-                        IconButton(onPressed: (){}, icon: const Icon(Iconsax.arrow_right_3, size: 18))
+                        IconButton(
+                          icon: const Icon(Iconsax.arrow_right_3, size: 18),
+                          onPressed: () => context.pushNamed(Routes.productReviewsScreen),
+                        )
                       ],
                     ),
                     const SizedBox(height: MySizes.spaceBtwItems),
-
                   ],
                 ),
               ),

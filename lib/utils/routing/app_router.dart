@@ -3,6 +3,7 @@ import 'package:e_commerce/features/authentication/screens/password_configuratio
 import 'package:e_commerce/features/authentication/screens/signup/verify_email.dart';
 import 'package:e_commerce/features/personalization/screens/profile/profile.dart';
 import 'package:e_commerce/features/shop/screens/product_details/product_details.dart';
+import 'package:e_commerce/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:e_commerce/features/shop/test_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +33,7 @@ class AppRouter {
       case Routes.profileScreen:
         return MaterialPageRoute(builder: (_) => const ProfileScreen());
 
-      case Routes.productDetails:
+      case Routes.productDetailsScreen:
         return MaterialPageRoute(builder: (_) => const ProductDetailsScreen());
 
       case Routes.successScreen:
@@ -54,6 +55,9 @@ class AppRouter {
 
       case Routes.navigationMenu:
         return MaterialPageRoute(builder: (_) => const NavigationMenu());
+
+      case Routes.productReviewsScreen:
+        return MaterialPageRoute(builder: (_) => const ProductReviewsScreen());
 
       case Routes.testScreen:
         return MaterialPageRoute(builder: (_) => const TestScreen());

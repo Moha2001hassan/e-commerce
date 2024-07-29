@@ -22,7 +22,7 @@ class ProductCardVertical extends StatelessWidget {
     final dark = MyHelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: () => context.pushNamed(Routes.productDetails),
+      onTap: () => context.pushNamed(Routes.productDetailsScreen),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(0.5),

@@ -55,18 +55,21 @@ class ProductImageSlider extends StatelessWidget {
             ),
 
             // AppBar Icon
-             MyAppBar(
+            MyAppBar(
               showBackArrow: true,
               actions: [
-                LikeButton(
-                    size: 40,
-                  likeBuilder: (bool isLiked) {
-                    return Icon(
-                      isLiked ? Iconsax.heart5 : Iconsax.heart,
-                      color: isLiked ? Colors.red : Colors.grey,
-                      size: 40.0,
-                    );
-                  },
+                Container(
+                  margin: const EdgeInsets.only(right: 6, top: 4),
+                  child: LikeButton(
+                    size: 35,
+                    likeBuilder: (bool isLiked) {
+                      return Icon(
+                        isLiked ? Iconsax.heart5 : Iconsax.heart,
+                        color: isLiked ? Colors.red : Colors.grey,
+                        size: 40.0,
+                      );
+                    },
+                  ),
                 )
               ],
             ),
