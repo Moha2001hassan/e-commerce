@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';
 
@@ -22,14 +21,16 @@ class BrandTitleWithVerifiedIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisSize: MainAxisSize.min,
       children: [
-
-        Text(
-          title,
-          style: Theme.of(context).textTheme.bodyLarge,
-          maxLines: maxLines,
-          overflow: TextOverflow.ellipsis,
-          textAlign: textAlign,
+        Flexible(
+          child: Text(
+            title,
+            style: Theme.of(context).textTheme.bodyLarge,
+            maxLines: maxLines,
+            overflow: TextOverflow.ellipsis,
+            textAlign: textAlign,
+          ),
         ),
         const SizedBox(width: MySizes.xs),
         const Icon(Iconsax.verify5, color: MyColors.primary, size: MySizes.iconXs),

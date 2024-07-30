@@ -56,7 +56,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.shopping_cart,
                     title: "My Cart",
                     supTitle: "Set shopping delivery address",
-                    onTap: () {},
+                    onTap: () => context.pushNamed(Routes.cartScreen),
                   ),
                   SettingsMenuTile(
                     icon: Iconsax.bag_tick,

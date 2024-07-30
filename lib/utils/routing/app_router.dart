@@ -13,6 +13,7 @@ import '../../common/widgets/success_screen.dart';
 import '../../features/authentication/screens/login/login.dart';
 import '../../features/authentication/screens/onboarding/onboarding.dart';
 import '../../features/authentication/screens/signup/signup.dart';
+import '../../features/shop/screens/cart/cart.dart';
 import '../../navigation_menu.dart';
 import '../constants/text_strings.dart';
 import 'routes.dart';
@@ -66,6 +67,9 @@ class AppRouter {
 
       case Routes.userAddressScreen:
         return MaterialPageRoute(builder: (_) => const UserAddressScreen());
+
+      case Routes.cartScreen:
+        return MaterialPageRoute(builder: (_) => const CartScreen());
 
       case Routes.testScreen:
         return MaterialPageRoute(builder: (_) => const TestScreen());

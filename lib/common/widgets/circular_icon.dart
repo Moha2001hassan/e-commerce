@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../utils/constants/colors.dart';
 import '../../utils/helpers/my_helper_functions.dart';
-
+// TODO Need to delete
 class CircularIcon extends StatelessWidget {
   const CircularIcon({
     super.key,
@@ -27,6 +27,7 @@ class CircularIcon extends StatelessWidget {
     final dark = MyHelperFunctions.isDarkMode(context);
 
     return Container(
+      alignment: Alignment.center,
       height: height,
       width: width,
       decoration: BoxDecoration(

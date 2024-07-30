@@ -1,16 +1,13 @@
 import 'package:e_commerce/utils/helpers/my_helper_functions.dart';
+import 'package:e_commerce/utils/helpers/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import '../../../../utils/routing/routes.dart';
 
 class MyCartCounterIcon extends StatelessWidget {
-  const MyCartCounterIcon({
-    super.key,
-    this.iconColor,
-    required this.onPressed,
-  });
+  const MyCartCounterIcon({super.key, this.iconColor});
 
   final Color? iconColor;
-  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +15,7 @@ class MyCartCounterIcon extends StatelessWidget {
     return Stack(
       children: [
         IconButton(
-          onPressed: onPressed,
+          onPressed: () => context.pushNamed(Routes.cartScreen),
           icon: const Icon(Iconsax.shopping_bag),
           color: iconColor ?? (dark ? Colors.white : Colors.black),
         ),
@@ -27,10 +24,7 @@ class MyCartCounterIcon extends StatelessWidget {
           child: Container(
             width: 18,
             height: 18,
-            decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.circular(100),
-            ),
+            decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(100)),
             child: Center(
               child: Text(
                 '2',

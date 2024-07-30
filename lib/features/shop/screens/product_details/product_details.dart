@@ -7,7 +7,6 @@ import 'package:e_commerce/utils/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
-
 import 'widgets/product_attributes.dart';
 import 'widgets/product_detail_image_slider.dart';
 import 'widgets/product_meta_data.dart';
@@ -86,7 +85,6 @@ class ProductDetailsScreen extends StatelessWidget {
                         )
                       ],
                     ),
-                    const SizedBox(height: MySizes.spaceBtwItems),
                   ],
                 ),
               ),

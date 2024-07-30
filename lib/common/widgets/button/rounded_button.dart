@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/helpers/my_helper_functions.dart';
 
-class AppRoundedButton extends StatelessWidget {
-  const AppRoundedButton({
+class MyCircularIconBtn extends StatelessWidget {
+  const MyCircularIconBtn({
     super.key,
     required this.icon,
     this.width,

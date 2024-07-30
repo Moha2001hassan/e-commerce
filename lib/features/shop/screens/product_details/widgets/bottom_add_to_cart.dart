@@ -12,7 +12,7 @@ class BottomAddToCart extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDark = MyHelperFunctions.isDarkMode(context);
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 12),
       decoration: BoxDecoration(
         color: isDark ? MyColors.darkerGrey : MyColors.grey,
         borderRadius: const BorderRadius.only(
@@ -25,7 +25,7 @@ class BottomAddToCart extends StatelessWidget {
         children: [
           Row(
             children: [
-              AppRoundedButton(
+              MyCircularIconBtn(
                 icon: Iconsax.minus,
                 onPressed: () {},
                 backgroundColor: Colors.black,
@@ -33,10 +33,12 @@ class BottomAddToCart extends StatelessWidget {
                 height: 40,
                 color: Colors.white,
               ),
-              const SizedBox(width: MySizes.spaceBtwItems),
-              Text('2', style: Theme.of(context).textTheme.titleSmall),
-              const SizedBox(width: MySizes.spaceBtwItems),
-              AppRoundedButton(
+
+              const SizedBox(width: 20),
+              Text('2', style: Theme.of(context).textTheme.headlineMedium),
+              const SizedBox(width: 20),
+
+              MyCircularIconBtn(
                 icon: Icons.add,
                 onPressed: () {},
                 backgroundColor: MyColors.primary,
