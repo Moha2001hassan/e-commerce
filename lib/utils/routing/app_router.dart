@@ -1,6 +1,8 @@
 import 'package:e_commerce/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:e_commerce/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:e_commerce/features/authentication/screens/signup/verify_email.dart';
+import 'package:e_commerce/features/personalization/screens/address/add_new_address.dart';
+import 'package:e_commerce/features/personalization/screens/address/address.dart';
 import 'package:e_commerce/features/personalization/screens/profile/profile.dart';
 import 'package:e_commerce/features/shop/screens/product_details/product_details.dart';
 import 'package:e_commerce/features/shop/screens/product_reviews/product_reviews.dart';
@@ -58,6 +60,12 @@ class AppRouter {
 
       case Routes.productReviewsScreen:
         return MaterialPageRoute(builder: (_) => const ProductReviewsScreen());
+
+      case Routes.addNewAddressScreen:
+        return MaterialPageRoute(builder: (_) => const AddNewAddressScreen());
+
+      case Routes.userAddressScreen:
+        return MaterialPageRoute(builder: (_) => const UserAddressScreen());
 
       case Routes.testScreen:
         return MaterialPageRoute(builder: (_) => const TestScreen());

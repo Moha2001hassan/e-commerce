@@ -7,6 +7,7 @@ import '../constants/colors.dart';
 import 'custom_themes/appbar_theme.dart';
 import 'custom_themes/checkbox_theme.dart';
 import 'custom_themes/chip_theme.dart';
+import 'custom_themes/floating_action_button_theme.dart';
 import 'custom_themes/text_field_theme.dart';
 
 class TAppTheme {
@@ -25,6 +26,7 @@ class TAppTheme {
     outlinedButtonTheme: TOutLinedButtonTheme.lightOutlinedButtonTheme,
     appBarTheme: MyAppBarTheme.lightAppBarTheme,
     chipTheme: MyChipTheme.lightChipTheme,
+    floatingActionButtonTheme: MyFloatingActionButtonTheme.lightFloatingActionButtonTheme,
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -40,5 +42,6 @@ class TAppTheme {
     outlinedButtonTheme: TOutLinedButtonTheme.darkOutlinedButtonTheme,
     appBarTheme: MyAppBarTheme.darkAppBarTheme,
     chipTheme: MyChipTheme.darkChipTheme,
+    floatingActionButtonTheme: MyFloatingActionButtonTheme.darkFloatingActionButtonTheme,
   );
 }

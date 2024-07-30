@@ -7,8 +7,8 @@ class TTextFormFieldTheme {
     errorMaxLines: 3,
     prefixIconColor: Colors.grey,
     suffixIconColor: Colors.grey,
-    labelStyle: const TextStyle().copyWith(color: Colors.black, fontSize: 14),
-    hintStyle: const TextStyle().copyWith(color: Colors.black, fontSize: 14),
+    labelStyle: const TextStyle().copyWith(color: Colors.black, fontSize: 13),
+    hintStyle: const TextStyle().copyWith(color: Colors.black, fontSize: 13),
     errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),
     floatingLabelStyle: const TextStyle().copyWith(color: Colors.black.withOpacity(0.8)),
     border: OutlineInputBorder(
@@ -31,7 +31,7 @@ class TTextFormFieldTheme {
       borderRadius: BorderRadius.circular(14),
       borderSide: const BorderSide(color: Colors.orange, width: 2),
     ),
-    contentPadding: const EdgeInsets.symmetric(vertical: 15),
+    contentPadding: const EdgeInsets.symmetric(vertical: 18),
   );
 
   // dark theme
@@ -39,8 +39,8 @@ class TTextFormFieldTheme {
     errorMaxLines: 3,
     prefixIconColor: Colors.grey,
     suffixIconColor: Colors.grey,
-    labelStyle: const TextStyle().copyWith(color: Colors.white, fontSize: 14),
-    hintStyle: const TextStyle().copyWith(color: Colors.white, fontSize: 14),
+    labelStyle: const TextStyle().copyWith(color: Colors.white, fontSize: 13),
+    hintStyle: const TextStyle().copyWith(color: Colors.white, fontSize: 13),
     errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),
     floatingLabelStyle: const TextStyle().copyWith(color: Colors.white.withOpacity(0.8)),
     border: OutlineInputBorder(
@@ -63,6 +63,6 @@ class TTextFormFieldTheme {
       borderRadius: BorderRadius.circular(14),
       borderSide: const BorderSide(color: Colors.orange, width: 2),
     ),
-    contentPadding: const EdgeInsets.symmetric(vertical: 15),
+    contentPadding: const EdgeInsets.symmetric(vertical: 18),
   );
 }
