@@ -12,6 +12,7 @@ class BillingAddressSection extends StatelessWidget {
       children: [
         const MySectionHeading(title: 'Shopping Address', buttonTitle: 'Change', onPressed: null),
         Text('Mohamed Hassan', style: Theme.of(context).textTheme.bodyLarge),
+        const SizedBox(height: MySizes.spaceBtwItems / 2),
         Row(
           children: [
             const Icon(Icons.phone, color: Colors.grey, size: 16),

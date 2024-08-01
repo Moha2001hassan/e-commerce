@@ -7,7 +7,6 @@ class Routes{
   static const String forgetPasswordScreen = "/forgetPasswordScreen";
   static const String resetPasswordScreen = "/resetPasswordScreen";
   static const String navigationMenu = "/navigationMenuScreen";
-
   static const String profileScreen = "/profileScreen";
   static const String productDetailsScreen = "/productDetailsScreen";
   static const String productReviewsScreen = "/productDetails";
@@ -15,5 +14,9 @@ class Routes{
   static const String addNewAddressScreen = "/addNewAddressScreen";
   static const String cartScreen = "/cartScreen";
   static const String checkoutScreen = "/checkoutScreen";
+  static const String orderScreen = "/orderScreen";
+
+
+
   static const String testScreen = "/testScreen";
 }

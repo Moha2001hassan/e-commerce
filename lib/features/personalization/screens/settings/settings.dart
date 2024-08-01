@@ -62,7 +62,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.bag_tick,
                     title: "My Orders",
                     supTitle: "Set shopping delivery address",
-                    onTap: () {},
+                    onTap: () => context.pushNamed(Routes.orderScreen),
                   ),
                   SettingsMenuTile(
                     icon: Iconsax.bank,
