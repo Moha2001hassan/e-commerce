@@ -13,9 +13,10 @@ class MyCircularIconBtn extends StatelessWidget {
     this.color,
     this.backgroundColor,
     this.onPressed,
+    this.elevation = 7,
   });
 
-  final double? width, height, size;
+  final double? width, height, size, elevation;
   final IconData icon;
   final Color? color;
   final Color? backgroundColor;
@@ -26,7 +27,7 @@ class MyCircularIconBtn extends StatelessWidget {
     final dark = MyHelperFunctions.isDarkMode(context);
     return Material(
       borderRadius: BorderRadius.circular(50),
-      elevation: 7,
+      elevation: elevation!,
       color: backgroundColor != null
           ? backgroundColor!
           : dark

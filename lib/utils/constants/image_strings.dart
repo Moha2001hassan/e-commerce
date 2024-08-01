@@ -11,13 +11,13 @@ class MyImages{
   static const String banner3 = "assets/images/banner3.jpg";
   static const String shoesImg = "assets/images/shoes_img.png";
   static const String boyImg = "assets/images/boy.png";
-  static const String clothesIcon = "assets/icons/clothes_icon.png";
-
 
   // Icons
   static const String facebookLogo = "assets/icons/facebook.png";
   static const String googleLogo = "assets/icons/google.png";
   static const String shoesIcon = "assets/icons/shoes_icon.png";
+  static const String clothesIcon = "assets/icons/clothes_icon.png";
+  static const String paypalIcon = "assets/icons/paypal_icon.png";
 
   // Logos
   static const String mLogo = "assets/logos/m_logo.png";

@@ -25,8 +25,8 @@ class MySizes{
 
   // Default Spacing between sections
   static const double defaultSpace = 24;
-  static const double spaceBtwItems = 24;
-  static const double spaceBtwSections = 24;
+  static const double spaceBtwItems = 16;
+  static const double spaceBtwSections = 32;
 
   static const double productImageSize = 120;
   static const double productImageRadius = 16;

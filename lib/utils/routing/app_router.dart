@@ -14,6 +14,7 @@ import '../../features/authentication/screens/login/login.dart';
 import '../../features/authentication/screens/onboarding/onboarding.dart';
 import '../../features/authentication/screens/signup/signup.dart';
 import '../../features/shop/screens/cart/cart.dart';
+import '../../features/shop/screens/checkout/checkout.dart';
 import '../../navigation_menu.dart';
 import '../constants/text_strings.dart';
 import 'routes.dart';
@@ -70,6 +71,9 @@ class AppRouter {
 
       case Routes.cartScreen:
         return MaterialPageRoute(builder: (_) => const CartScreen());
+
+      case Routes.checkoutScreen:
+        return MaterialPageRoute(builder: (_) => const CheckoutScreen());
 
       case Routes.testScreen:
         return MaterialPageRoute(builder: (_) => const TestScreen());

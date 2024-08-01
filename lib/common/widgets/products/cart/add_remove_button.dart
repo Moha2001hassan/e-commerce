@@ -2,16 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/helpers/my_helper_functions.dart';
 import '../../button/rounded_button.dart';
-import '../../circular_icon.dart';
 
 class ProductQuantityWithAddRemove extends StatelessWidget {
   const ProductQuantityWithAddRemove({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final dark = MyHelperFunctions.isDarkMode(context);
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
