@@ -4,6 +4,7 @@ import 'package:e_commerce/features/authentication/screens/signup/verify_email.d
 import 'package:e_commerce/features/personalization/screens/address/add_new_address.dart';
 import 'package:e_commerce/features/personalization/screens/address/address.dart';
 import 'package:e_commerce/features/personalization/screens/profile/profile.dart';
+import 'package:e_commerce/features/shop/screens/all_products/all_products.dart';
 import 'package:e_commerce/features/shop/screens/order/order.dart';
 import 'package:e_commerce/features/shop/screens/product_details/product_details.dart';
 import 'package:e_commerce/features/shop/screens/product_reviews/product_reviews.dart';
@@ -85,6 +86,9 @@ class AppRouter {
 
       case Routes.subCategoriesScreen:
         return MaterialPageRoute(builder: (_) => const SubCategoriesScreen());
+
+      case Routes.allProductsScreen:
+        return MaterialPageRoute(builder: (_) => const AllProductsScreen());
 
       default:
         return MaterialPageRoute(builder: (_) => const OnBoarding());

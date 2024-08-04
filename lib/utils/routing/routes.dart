@@ -16,6 +16,7 @@ class Routes{
   static const String checkoutScreen = "/checkoutScreen";
   static const String orderScreen = "/orderScreen";
   static const String subCategoriesScreen = "/subCategoriesScreen";
+  static const String allProductsScreen = "/allProductsScreen";
 
 
 
