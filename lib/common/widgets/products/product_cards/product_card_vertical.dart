@@ -53,14 +53,10 @@ class ProductCardVertical extends StatelessWidget {
                     child: RoundedContainer(
                       radius: MySizes.sm,
                       backgroundColor: MyColors.secondary.withOpacity(0.8),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: MySizes.sm, vertical: MySizes.xs),
+                      padding: const EdgeInsets.symmetric(horizontal: MySizes.sm, vertical: MySizes.xs),
                       child: Text(
                         "25%",
-                        style: Theme.of(context)
-                            .textTheme
-                            .labelLarge!
-                            .apply(color: Colors.black),
+                        style: Theme.of(context).textTheme.labelLarge!.apply(color: Colors.black),
                       ),
                     ),
                   ),
@@ -69,13 +65,7 @@ class ProductCardVertical extends StatelessWidget {
                   const Positioned(
                     top: 5,
                     right: 5,
-                    child: Icon(
-                      //Iconsax.heart5,
-                      Iconsax.heart,
-                      color: Colors.red,
-                      //color: Colors.grey,
-                      size: 30,
-                    ),
+                    child: Icon(Iconsax.heart, color: Colors.red, size: 30),
                   ),
                 ],
               ),
@@ -89,10 +79,8 @@ class ProductCardVertical extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Title
-                  ProductTitleText(
-                      title: "Green Nike Air Shoes", smallSize: true),
+                  ProductTitleText(title: "Green Nike Air Shoes", smallSize: true),
                   SizedBox(height: 8),
-
                   // brand name
                   BrandTitleWithVerifiedIcon(title: "Nike"),
                 ],
@@ -121,8 +109,7 @@ class ProductCardVertical extends StatelessWidget {
                   child: const SizedBox(
                     width: 32,
                     height: 32,
-                    child:
-                        Center(child: Icon(Iconsax.add, color: Colors.white)),
+                    child: Center(child: Icon(Iconsax.add, color: Colors.white)),
                   ),
                 ),
               ],

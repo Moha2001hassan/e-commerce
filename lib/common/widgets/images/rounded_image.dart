@@ -44,14 +44,10 @@ class RoundedImage extends StatelessWidget {
           color: backgroundColor,
         ),
         child: ClipRRect(
-          borderRadius: applyImgRadius
-              ? BorderRadius.circular(MySizes.md)
-              : BorderRadius.zero,
+          borderRadius: applyImgRadius ? BorderRadius.circular(borderRadius) : BorderRadius.zero,
           child: Image(
             fit: fit,
-            image: isNetworkImage
-                ? NetworkImage(imgUrl)
-                : AssetImage(imgUrl) as ImageProvider,
+            image: isNetworkImage ? NetworkImage(imgUrl) : AssetImage(imgUrl) as ImageProvider,
           ),
         ),
       ),

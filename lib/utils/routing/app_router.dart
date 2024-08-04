@@ -16,6 +16,7 @@ import '../../features/authentication/screens/onboarding/onboarding.dart';
 import '../../features/authentication/screens/signup/signup.dart';
 import '../../features/shop/screens/cart/cart.dart';
 import '../../features/shop/screens/checkout/checkout.dart';
+import '../../features/shop/screens/sub_category/sub_category.dart';
 import '../../navigation_menu.dart';
 import '../constants/text_strings.dart';
 import 'routes.dart';
@@ -81,6 +82,9 @@ class AppRouter {
 
       case Routes.orderScreen:
         return MaterialPageRoute(builder: (_) => const OrderScreen());
+
+      case Routes.subCategoriesScreen:
+        return MaterialPageRoute(builder: (_) => const SubCategoriesScreen());
 
       default:
         return MaterialPageRoute(builder: (_) => const OnBoarding());

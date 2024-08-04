@@ -19,6 +19,15 @@ class MyImages{
   static const String clothesIcon = "assets/icons/clothes_icon.png";
   static const String paypalIcon = "assets/icons/paypal_icon.png";
 
+  // Categories
+  static const String animalsCategory = "assets/images/categories/animals_category.png";
+  static const String clothesCategory = "assets/images/categories/clothes_category.png";
+  static const String cosmeticsCategory = "assets/images/categories/cosmetics_category.png";
+  static const String electronicsCategory = "assets/images/categories/electronics_category.png";
+  static const String furnitureCategory = "assets/images/categories/furniture_category.png";
+  static const String shoesCategory = "assets/images/categories/shoes_icon.png";
+  static const String sportCategory = "assets/images/categories/sport_category.png";
+
   // Logos
   static const String mLogo = "assets/logos/m_logo.png";
 }

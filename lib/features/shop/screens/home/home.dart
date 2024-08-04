@@ -26,29 +26,29 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             // Header
-            const PrimaryHeaderContainer(
+            PrimaryHeaderContainer(
               child: Column(
                 children: [
                   // Appbar
-                  MyHomeAppBar(),
-                  SizedBox(height: 20),
+                  const MyHomeAppBar(),
+                  const SizedBox(height: 20),
 
                   // SearchBar
-                  MySearchContainer(text: 'Search in Store'),
-                  SizedBox(height: 20),
+                  const MySearchContainer(text: 'Search in Store'),
+                  const SizedBox(height: 20),
 
                   // Categories
                   Padding(
-                    padding: EdgeInsets.only(left: MySizes.defaultSpace),
+                    padding: const EdgeInsets.only(left: MySizes.defaultSpace),
                     child: Column(
                       children: [
                         // Heading
-                        MySectionHeading(
+                        const MySectionHeading(
                           title: "Popular Categories",
                           showActionButton: false,
                           textColor: Colors.white,
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
 
                         // Categories
                         MyHomeCategories(),
@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   const SizedBox(height: 20),
 
-                  MySectionHeading(title: "Popular Products", onPressed: (){}),
+                  MySectionHeading(title: "Popular Products", onPressed: () {}),
 
                   // Popular Products
                   GridLayout(

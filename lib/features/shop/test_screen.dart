@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../../common/widgets/products/product_cards/product_card_horizontal.dart';
 import '../../utils/constants/sizes.dart';
 
 class TestScreen extends StatelessWidget {
@@ -12,20 +13,12 @@ class TestScreen extends StatelessWidget {
       body: SafeArea(
         child: Container(
           width: double.infinity,
-          child: Column(
+          child: const Column(
             children: [
-              const Text("Test Screen"),
-              const SizedBox(height: 100),
-              IconButton(
-                icon: const Icon(Icons.share, size: MySizes.iconMd),
-                onPressed: () async {
-                  try {
-                    await Share.share("https://www.google.com");
-                  } catch (e) {
-                    print('Error sharing content: $e');
-                  }
-                },
-              )
+              Text("Test Screen"),
+              SizedBox(height: 100),
+
+              ProductCardHorizontal(),
             ],
           ),
         ),

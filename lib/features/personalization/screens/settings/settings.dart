@@ -39,7 +39,7 @@ class SettingsScreen extends StatelessWidget {
 
             // Body
             Padding(
-              padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+              padding: const EdgeInsets.fromLTRB(20, 10, 10, 0),
               child: Column(
                 children: [
                   // Account Setting

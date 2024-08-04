@@ -2,14 +2,12 @@ import 'package:e_commerce/common/widgets/texts/section_heading.dart';
 import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
 import '../../../../../utils/constants/sizes.dart';
-import '../../../../../utils/helpers/my_helper_functions.dart';
 
 class BillingPaymentSection extends StatelessWidget {
   const BillingPaymentSection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final dark = MyHelperFunctions.isDarkMode(context);
     return Column(
       children: [
         MySectionHeading(title: 'Payment Method', buttonTitle: 'Change', onPressed: () {}),

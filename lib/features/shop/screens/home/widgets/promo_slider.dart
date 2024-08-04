@@ -30,8 +30,8 @@ class _PromoSliderState extends State<PromoSlider> {
               });
             },
           ),
-          items: widget.banners
-              .map((url) => RoundedImage(imgUrl: url, fit: BoxFit.cover)).toList(),
+          items: widget.banners.map((url) => RoundedImage(
+              imgUrl: url, fit: BoxFit.cover, width: 320)).toList(),
         ),
         const SizedBox(height: 17),
 
@@ -40,11 +40,10 @@ class _PromoSliderState extends State<PromoSlider> {
           mainAxisSize: MainAxisSize.min,
           children: List.generate(widget.banners.length, (index) {
             return CircularContainer(
-              width: 20,
+              width: 18,
               height: 4,
               margin: const EdgeInsets.only(right: 10),
-              backgroundColor:
-                  _currentIndex == index ? MyColors.primary : Colors.grey,
+              backgroundColor: _currentIndex == index ? MyColors.primary : Colors.grey,
             );
           }),
         )
