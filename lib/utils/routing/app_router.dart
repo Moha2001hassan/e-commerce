@@ -15,6 +15,7 @@ import '../../common/widgets/success_screen.dart';
 import '../../features/authentication/screens/login/login.dart';
 import '../../features/authentication/screens/onboarding/onboarding.dart';
 import '../../features/authentication/screens/signup/signup.dart';
+import '../../features/shop/screens/brands/all_brands.dart';
 import '../../features/shop/screens/cart/cart.dart';
 import '../../features/shop/screens/checkout/checkout.dart';
 import '../../features/shop/screens/sub_category/sub_category.dart';
@@ -89,6 +90,9 @@ class AppRouter {
 
       case Routes.allProductsScreen:
         return MaterialPageRoute(builder: (_) => const AllProductsScreen());
+
+      case Routes.allBrandsScreen:
+        return MaterialPageRoute(builder: (_) => const AllBrandsScreen());
 
       default:
         return MaterialPageRoute(builder: (_) => const OnBoarding());

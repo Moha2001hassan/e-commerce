@@ -4,6 +4,8 @@ import 'package:e_commerce/common/widgets/custom_shapes/containers/search_contai
 import 'package:e_commerce/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:e_commerce/common/widgets/texts/section_heading.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
+import 'package:e_commerce/utils/helpers/navigation.dart';
+import 'package:e_commerce/utils/routing/routes.dart';
 import 'package:flutter/material.dart';
 import '../../../../common/widgets/brand/brand_card.dart';
 import '../../../../common/widgets/grid_layout.dart';
@@ -33,7 +35,7 @@ class StoreScreen extends StatelessWidget {
                 backgroundColor: dark ? Colors.black : Colors.white,
                 expandedHeight: 350,
                 flexibleSpace: Padding(
-                  padding: const EdgeInsets.all(MySizes.defaultSpace),
+                  padding: const EdgeInsets.all(20),
                   child: ListView(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
@@ -45,18 +47,18 @@ class StoreScreen extends StatelessWidget {
                         showBackground: false,
                         margin: EdgeInsets.zero,
                       ),
-                      const SizedBox(height: MySizes.spaceBtwSections),
+                      const SizedBox(height: MySizes.spaceBtwItems),
 
                       // Heading
                       MySectionHeading(
                         title: "Features Brands",
-                        onPressed: () {},
+                        onPressed: () => context.pushNamed(Routes.allBrandsScreen),
                       ),
                       const SizedBox(height: MySizes.spaceBtwItems / 2),
 
                       // Brands GridView
                       GridLayout(
-                        mainAxisExtent: 60,
+                        mainAxisExtent: 65,
                         itemCount: 4,
                         itemBuilder: (_, index) {
                           return const BrandCard(showBorder: true);

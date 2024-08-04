@@ -14,7 +14,8 @@ class BrandCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = MyHelperFunctions.isDarkMode(context);
-    return GestureDetector(
+    return InkWell(
+      borderRadius: BorderRadius.circular(16),
       onTap: () {},
       child: RoundedContainer(
         padding: const EdgeInsets.all(10),
